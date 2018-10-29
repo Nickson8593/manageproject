@@ -1,0 +1,90 @@
+package Customer;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+
+public class customerform {
+    
+    
+   JFrame myframe=new JFrame("ADD recipients");
+   JPanel mypanel = new JPanel();
+   JLabel  firstname=new JLabel("First Name");
+   JLabel  lastname=new JLabel("Last Name");
+   JLabel  gender=new JLabel("Gender");
+   JLabel telephone=new JLabel("Phone Number");
+   JLabel id =new JLabel("ID");
+   JLabel address= new JLabel("Address");
+   JLabel housetype = new JLabel("House Type");
+     
+    JButton  update=new JButton("ADD");
+    JButton save=new JButton("SAVE");
+    JButton remove=new JButton("REMOVE");
+    
+    JTextField  textfname= new JTextField(20);
+    JTextField  textlname= new JTextField(20);
+    JTextField textgender=new JTextField(20);
+    JTextField textphone=new JTextField(20);
+    JTextField textid=new JTextField(20);
+    JTextField textaddress=new JTextField(20);
+    JTextField texthouse=new JTextField(20);
+
+    public customerform(){
+        gui();
+    }
+  public void gui(){
+ 
+      
+      
+    mypanel.setLayout(null);
+    myframe.add(mypanel);
+    mypanel.add(firstname);
+    mypanel.add(lastname);
+    mypanel.add(id);
+    mypanel.add(gender);
+    mypanel.add(address);   
+    mypanel.add(housetype);
+    mypanel.add(update);
+    mypanel.add(save);
+    mypanel.add(remove);
+
+    mypanel.add(telephone);
+    mypanel.add(textfname);
+    mypanel.add(textlname);
+    mypanel.add(textgender);
+    mypanel.add(textphone);
+    mypanel.add(textid);
+    mypanel.add(textaddress);
+    mypanel.add(texthouse);
+    myframe.setVisible(true);
+    mypanel.add(update);
+    myframe.setSize(1000,1000);
+         
+  //arranging the database
+    firstname.setBounds(40, 40, 120, 40);
+    lastname.setBounds(40, 70, 120, 40);
+    gender.setBounds(40, 100, 120, 40);
+    telephone.setBounds(40, 130, 120, 40);
+    id.setBounds(40,120,120,40);
+    address.setBounds(40,140,120,40);
+    housetype.setBounds(40,160,120,40);
+    textfname.setBounds(200,40,200,30);
+    textlname.setBounds(200,70,200,30);
+    textgender.setBounds(200,100,200,30);
+    textphone.setBounds(200,130,200,30);
+    textid.setBounds(200,160,200,30);
+    textaddress.setBounds(200,190,200,30);
+    texthouse.setBounds(200,210,200,30);
+    update.setBounds(40, 300, 100, 30);
+    save.setBounds(40, 350, 100, 30);
+    remove.setBounds(40, 400, 100, 30);
+   
+        }
+      
+    
+    public static void main(String[] args) {
+        customerform b = new customerform();
+}
+}
