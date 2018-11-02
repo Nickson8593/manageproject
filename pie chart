@@ -1,0 +1,33 @@
+package Customer;
+
+public class piechart_1 extends javax.swing.JFrame {
+
+    private piechart_1() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+/** Creates new form PieChartJFrame */
+ChartPanel chartPanel;
+public piechart_1() {
+    initComponents();
+}
+
+private DefaultPieDataset createPieDataSet() {
+
+    DefaultPieDataset pieDataset = new DefaultPieDataset();
+    pieDataset.setValue("Price", new Integer(15));
+    pieDataset.setValue("Amount", new Integer(15));
+    pieDataset.setValue("percentage done", new Integer(30));
+
+    return pieDataset;
+
+}
+
+    private void initComponents() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+public static void main(String[]args){
+piechart_1 v = piechart_1();
+        }
+}
