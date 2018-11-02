@@ -1,0 +1,106 @@
+package projectmanagement;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+public class options extends JFrame {
+   
+private JFrame frame;
+private JPanel panel;
+private JButton button1;
+private JButton button2;   
+private JButton button3;
+private JButton button4; 
+private JButton button5;
+    
+public options()
+    { 
+      gui();
+        
+    }
+public final void gui()
+    {
+         
+
+    frame=new  JFrame("how may we help");
+    frame.setVisible(true);
+    frame.setSize(600,400);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+           
+    panel= new JPanel(new FlowLayout());
+         
+            
+    panel.setLayout(null);
+    button1= new JButton("VILLA");           
+    button2= new JButton("MANSIONS");  
+    button3= new JButton("BANGALOW"); 
+    button4= new JButton("MANSIONNETE");   
+    button5=new JButton("COTTAGE");
+   
+             
+    panel.add(button1);
+    panel.add(button2);
+    panel.add(button3);
+    panel.add(button4);
+    panel.add(button5);
+    frame.add(panel);
+   
+    
+    button1.addActionListener((java.awt.event.ActionEvent showvilla)-> 
+        {newvillaactionPerformed(showvilla);});
+    button2.addActionListener((java.awt.event.ActionEvent showmansion)-> 
+        {newmansionsactionPerformed(showmansion);});
+    button3.addActionListener((java.awt.event.ActionEvent showbangalows)-> 
+        {newbangalowsactionPerformed(showbangalows);});
+    button4.addActionListener((java.awt.event.ActionEvent showmansionette)-> 
+        {newmansionetteactionPerformed(showmansionette);});
+    button5.addActionListener((java.awt.event.ActionEvent showcottage)-> 
+        {newcottageactionPerformed(showcottage);});
+            
+   //for the arrangement     
+     button1.setBounds(150,120,100,30);
+    button2.setBounds(150,170,100,30);
+    button3.setBounds(150,210,130,30);
+    button4.setBounds(150,260,120,30);
+    button5.setBounds(150,310,100,30);
+    }
+//actionlistener for the villa button
+public void newvillaactionPerformed( ActionEvent e)
+{ 
+   if(e.getSource()==button1)
+    {
+        new villa().setVisible(true);
+    }
+    villa villas= new villa();
+}
+//actionlistener for the mansion
+public void newmansionsactionPerformed( ActionEvent showmansion)
+{ 
+    mansion mansions= new mansion();
+}
+//actionlistener for the bangalows
+    public void newbangalowsactionPerformed( ActionEvent bangalows)
+{ 
+    bangalows  bangalow = new bangalows();
+    
+}
+    //actionlisteners for the cottage
+    public void newcottageactionPerformed( ActionEvent cottage)
+{ 
+    cottage cottages= new cottage();
+}
+    public void newmansionetteactionPerformed( ActionEvent cottage)
+{ 
+    mansionette mansionette= new mansionette();
+}
+    
+public static void main(String[] args) {
+      options b =  new options();
+}       
+}
+    
+
+
