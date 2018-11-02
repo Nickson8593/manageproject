@@ -1,0 +1,61 @@
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+/**
+ *
+ * @author LENOVO
+ */
+public class villa {
+   
+        
+public static void main(String[] args) {
+    String[] housetype = {"Bungalow","Mansion","Mansionete","Cottage","Villa"};
+    JComboBox combo = new JComboBox(housetype);
+    String[] material = {"Wood","Stone","Marble"};
+    JComboBox comb = new JComboBox(material);
+    JTextField area = new JTextField("");
+    JTextField amount = new JTextField("");
+    JTextField price = new JTextField("");
+    JTextField id = new JTextField("");
+    JTextField contact = new JTextField("");
+    JPanel panel = new JPanel(new GridLayout(0, 1));
+    panel.add(new JLabel("KEY IN YOUR DETAILS"));
+    panel.add(new JLabel("HOUSETYPE"));
+    panel.add(combo);
+    panel.add(new JLabel("ID"));
+    panel.add(id);
+    panel.add(new JLabel("CONTACT"));
+    panel.add(contact);
+    panel.add(new JLabel("AREA"));
+    panel.add(area);
+    panel.add(new JLabel("AMOUNT"));
+    panel.add(amount);
+    panel.add(new JLabel("PRICE"));
+    panel.add(price);
+    panel.add(new JLabel("MATERIAL"));
+    panel.add(comb);
+   int result = JOptionPane.showConfirmDialog(null, panel, "HOUSE DETAILS",
+        JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+    if (result == JOptionPane.OK_OPTION) {
+        System.out.println(comb.getSelectedItem()
+            + " " + combo.getSelectedItem()
+            + " " + area.getText()
+            + " " + amount.getText()
+            + " " + price.getText()
+            + " " + id.getText()
+            + " " + contact.getText());
+    } else {
+        System.out.println("Cancelled");
+    }
+   }
+
+    void setVisible(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
