@@ -1,0 +1,24 @@
+import java.sql.*;
+import java.util.*;
+import java.util.logging.Logger;
+
+public class database {
+    public static void main(String[] args)throws SQLException {
+        String url="http://localhost/phpmyadmin/sql.php";
+        Properties prop=new Properties();
+        prop.setProperty("user","root");
+        prop.setProperty("password","");
+        Driver d;d
+        d = new Driver();
+        Connection con = d.connect(url,prop);
+        if(con==null)   {
+            System.out.println("connection failed");
+            return;
+        }
+        DatabaseMetaData dm =con.getMetaData();
+        String dbversion=dm.getDatabaseProductVersion();
+        String dbname=dm.getDatabaseProductName();
+        System.out.println("name:"+dbname);
+        System.out.println("version:"+dbversion);
+    }
+}
