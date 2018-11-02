@@ -1,0 +1,38 @@
+package projectmanagement;
+
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+class bungalow {
+public static void main(String[] args) {
+    JTextField firstname = new JTextField("John");
+    JTextField lastname = new JTextField("Kenedy");
+    JTextField id = new JTextField("001");
+    JTextField contact = new JTextField("0721212121");
+    
+    JPanel panel = new JPanel(new GridLayout(0, 1));
+    panel.add(new JLabel("YOUR PROJECT MANAGER DETAILS"));
+    panel.add(new JLabel("FIRSTNAME"));
+    panel.add(firstname);
+    panel.add(new JLabel("LASTNAME"));
+    panel.add(lastname);
+    panel.add(new JLabel("ID"));
+    panel.add(id);
+    panel.add(new JLabel("CONTACT"));
+    panel.add(contact);
+   int result = JOptionPane.showConfirmDialog(null, panel, "HOUSE DETAILS",
+        JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+  if (result == JOptionPane.OK_OPTION) {
+        System.out.println( " " + firstname.getText()
+            + " " + lastname.getText()
+            + " " + id.getText()
+            + " " + contact.getText());
+    } else {
+        System.out.println("Cancelled");
+    }
+}
+}
+
+    
+
